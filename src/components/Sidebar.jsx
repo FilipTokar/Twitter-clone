@@ -16,7 +16,7 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <TwitterIcon/>
+      <TwitterIcon className='sidebar__twitterIcon'/>
       <SidebarOption active Icon={HomeIcon} text="Home"/>
       <SidebarOption Icon={TagIcon} text="Explore"/>
       <SidebarOption Icon={NotificationsNoneIcon} text="Notifications"/>
@@ -28,6 +28,7 @@ export default function Sidebar() {
       <Button 
       variant='outlined'
       className='sidebar__tweet'
+      fullWidth
       >
         Tweet
         </Button>
