@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    --twitter-color:#50b7f5;
+    --twitter-background:lightgrey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Sidebar option component */
+.sidebar__option {
+    display: flex;
+    padding: 4px 0 4px 12px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 200ms ease;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar__option:hover {
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar__option-text {
+    font-size: 20px;
+    padding: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar__option--active {
+    color: var(--twitter-color);
+    background-color: var(--twitter-background);
+    border-radius: 30px    
+}
+
+
+/* Sidebar component */
+.sidebar__tweet {
+    background-color: var(--twitter-color) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+    border-radius: 20px !important;
 }
