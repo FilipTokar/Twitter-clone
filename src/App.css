@@ -78,7 +78,6 @@ body {
 .feed {
     border-right: 1px solid var(--twitter-background);
     flex: 0.5;
-    min-width: fit-content;
     overflow-y: scroll;
 }
 
@@ -191,4 +190,67 @@ body {
 .tweetbox__opntions-icon {
     margin-right: 8px !important;
     color: var(--twitter-color) !important;
+}
+
+/* POST COMPONENT */
+
+.post {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--twitter-background);
+    padding: 8px 16px
+}
+
+.post__body{
+    width: 100%;
+}
+
+.post__img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.post__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.post__ver {
+    font-size: 14px !important;
+    color: var(--twitter-color) !important;
+}
+
+.post__header--modified {
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+
+.post__header-text {
+    display: flex;
+    align-items: center;
+}
+
+.post__header-text h3{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.post__header-description {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.post__avatar {
+    margin-right: 12px;
+}
+
+
+
+
+/* Features COMPONENT */
+
+.features {
+    flex: 0.25;
 }

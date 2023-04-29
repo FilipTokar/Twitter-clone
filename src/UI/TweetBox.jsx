@@ -13,6 +13,7 @@ export default function TweetBox() {
         <form>
           <div className="tweetbox__input">
             <input placeholder="What's happening?" type="text" />
+            <input placeholder="Optional: Enter image url." type="text" />
             <div className="tweetbox__options">
               <div className="tweetbox__options-icons">
                 <ImageIcon className="tweetbox__opntions-icon"/>
