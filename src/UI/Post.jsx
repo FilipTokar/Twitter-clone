@@ -6,7 +6,7 @@ import AutorenewIcon from '@mui/icons-material/Autorenew';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 
-export default function Post({displayName, userName, verified, text, img, avatar}) {
+export default function Post({displayName, userName, verified, text, img, avatar,time}) {
   return (
     <div className='post'>
       <div className="post__avatar">
@@ -20,6 +20,8 @@ export default function Post({displayName, userName, verified, text, img, avatar
                     <span className='post__header--modified'>
                        {verified ?  <VerifiedIcon className='post__ver'/> : null}
                         {userName}
+                        {" - "}
+                        {time}
                     </span>
                 </h3>
             </div>
