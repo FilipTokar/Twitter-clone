@@ -17,6 +17,10 @@ body {
     margin: 0 auto;
 }
 
+input:focus {
+    outline: none;
+}
+
 /* Sidebar option component */
 .sidebar__option {
     display: flex;
@@ -253,4 +257,20 @@ body {
 
 .features {
     flex: 0.25;
+    padding: 20px;
+}
+
+.features__input {
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 12px;
+    border-radius: 20px;
+    
+}
+
+.features__input input  {
+    border: none;
+    background-color: var(--twitter-background);
+    font-size: 16px;
 }
