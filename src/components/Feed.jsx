@@ -4,6 +4,7 @@ import TweetBox from '../UI/TweetBox'
 import Post from '../UI/Post'
 import db from "../features/firebase"
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import FlipMove from 'react-flip-move'
 
 export default function Feed() {
   const [posts, setPosts] = useState([])
@@ -12,7 +13,7 @@ export default function Feed() {
     const colRef = collection(db, 'posts')
     const q = query(colRef, orderBy("timestamp", "desc"))
     onSnapshot(q, snapshot => {
-      setPosts(snapshot.docs.map(doc => doc.data()))
+      setPosts(snapshot.docs.map((doc) => doc.data()))
       
     })
     console.log(posts)
@@ -22,19 +23,22 @@ export default function Feed() {
     <div className='feed'>
       <FeedHeader/>
       <TweetBox/>
+
+      <FlipMove>
       {
         posts.map((post) => (
           <Post
-      displayName={post.displayName}
-      userName={post.userName}
-      verified={post.verified}
-      text={post.text}
-      img={post.img}
-      avatar={post.avatar}
-      time={new Date(post.timestamp?.seconds * 1000).toUTCString()}/>
+        key={post.text}
+        displayName={post.displayName}
+        userName={post.userName}
+        verified={post.verified}
+        text={post.text}
+        img={post.img}
+        avatar={post.avatar}
+        time={new Date(post.timestamp?.seconds * 1000).toUTCString()}/>
         ))
       }
-
+    </FlipMove>
 
     </div>
   )

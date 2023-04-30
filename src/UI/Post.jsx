@@ -1,14 +1,15 @@
 import { Avatar } from '@mui/material'
-import React from 'react'
+import React, {forwardRef} from 'react'
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 
-export default function Post({displayName, userName, verified, text, img, avatar,time}) {
+
+const Post = forwardRef(({displayName, userName, verified, text, img, avatar,time}, ref) => {
   return (
-    <div className='post'>
+    <div className='post' ref={ref}>
       <div className="post__avatar">
         <Avatar src={avatar} className='post__avatar'/>
       </div>
@@ -40,4 +41,6 @@ export default function Post({displayName, userName, verified, text, img, avatar
       </div>
     </div>
   )
-}
+})
+
+export default Post
