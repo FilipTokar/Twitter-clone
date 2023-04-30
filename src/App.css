@@ -329,9 +329,16 @@ input:focus {
 @media (max-width: 710px) {
     .feed {
         flex: 0.9;
+        min-width: 0;
     }
 
     .sidebar {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 0 10px;
     }
 }
