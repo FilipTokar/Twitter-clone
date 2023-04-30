@@ -17,8 +17,8 @@ export default function TweetBox() {
   async function sendTweet(event) {
       event.preventDefault()
       await addDoc(collection(db, "posts"), {
-        displayName: "Filip Tokár",
-        userName: "filiptokar",
+        displayName: "UserName",
+        userName: "@username",
         verified: true,
         text: tweetMessage,
         img: tweetImage,

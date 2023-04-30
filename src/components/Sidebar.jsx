@@ -17,14 +17,14 @@ export default function Sidebar() {
   return (
     <div className='sidebar'>
       <TwitterIcon className='sidebar__twitterIcon'/>
-      <SidebarOption active Icon={HomeIcon} text="Home"/>
-      <SidebarOption Icon={TagIcon} text="Explore"/>
-      <SidebarOption Icon={NotificationsNoneIcon} text="Notifications"/>
-      <SidebarOption Icon={MailOutlineIcon} text="Messages"/>
-      <SidebarOption Icon={BookmarkBorderIcon} text="Booksmarks"/>
-      <SidebarOption Icon={CheckCircleOutlineIcon} text="Twitter Blue"/>
-      <SidebarOption Icon={PersonOutlineIcon} text="Profile"/>
-      <SidebarOption Icon={MoreHorizIcon} text="More"/>
+      <SidebarOption className="sidebar__icon"  active Icon={HomeIcon} text="Home"/>
+      <SidebarOption className="sidebar__icon" Icon={TagIcon} text="Explore"/>
+      <SidebarOption className="sidebar__icon" Icon={NotificationsNoneIcon} text="Notifications"/>
+      <SidebarOption className="sidebar__icon" Icon={MailOutlineIcon} text="Messages"/>
+      <SidebarOption className="sidebar__icon" Icon={BookmarkBorderIcon} text="Booksmarks"/>
+      <SidebarOption className="sidebar__icon" Icon={CheckCircleOutlineIcon} text="Twitter Blue"/>
+      <SidebarOption className="sidebar__icon" Icon={PersonOutlineIcon} text="Profile"/>
+      <SidebarOption className="sidebar__icon" Icon={MoreHorizIcon} text="More"/>
       <Button 
       variant='outlined'
       className='sidebar__tweet'
